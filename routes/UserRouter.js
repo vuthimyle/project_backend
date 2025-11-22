@@ -1,5 +1,5 @@
-import express from "express"
-import User from "../db/userModel"
+const express = require("express");
+const User = require("../db/userModel");
 const router = express.Router();
 
 // API 1: /user/list 
@@ -31,4 +31,4 @@ router.get("/:id", async (req, res) => {
     }
 });
 
-export default router
+module.exports = router;

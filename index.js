@@ -1,10 +1,9 @@
-import express from "express"
-import cors from "cors"
-import dbConnect from "./db/dbConnect.js"
-import PhotoRouter from "./routes/PhotoRouter"
-import UserRouter from "./routes/UserRouter"
-
-const app = express()
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const dbConnect = require("./db/dbConnect");
+const UserRouter = require("./routes/UserRouter");
+const PhotoRouter = require("./routes/PhotoRouter");
 dbConnect()
 
 app.use(cors());

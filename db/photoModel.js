@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const commentSchema = new mongoose.Schema({
   comment: String,
@@ -13,4 +13,5 @@ const photoSchema = new mongoose.Schema({
   comments: [commentSchema],
 });
 
-export default mongoose.models.Photos || mongoose.model("Photos", photoSchema);
+const Photo = mongoose.model.Photos || mongoose.model("Photos", photoSchema);
+module.exports = Photo;
